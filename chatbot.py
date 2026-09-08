@@ -12,6 +12,14 @@ def get_api_chat_response_message(model, messages):
         messages = messages
     )
 
+    # print token usage
+    # print(
+    #     f"Tokens used - "
+    #     f"Prompt: {api_response.usage.prompt_tokens}, "
+    #     f"Completion: {api_response.usage.completion_tokens}, "
+    #     f"Total: {api_response.usage.total_tokens}"
+    # )
+
     # extract the response text
     response_content = api_response.choices[0].message.content
 
